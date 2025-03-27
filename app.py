@@ -6,11 +6,6 @@ load_dotenv()
 import os
 import google.generativeai as genai
 
-headers={
-    "authorization": st.secrets["Google_API_KEY"],
-    "content-type": "application/json"
-}
-
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 model = genai.GenerativeModel("gemini-2.0-flash")
